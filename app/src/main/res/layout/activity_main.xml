@@ -13,17 +13,27 @@
         android:inputType="numberDecimal"
         android:textAlignment="center"
         android:layout_marginTop="30sp"
-        android:hint="@string/txt_hint_f"
+        android:hint="@string/txt_hint_g"
         ></EditText>
+
     <Button
+        android:id="@+id/btn_convert_celsius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/txt_btn_c"
-        android:id="@+id/btn_convert_celsius"
         android:layout_marginStart="80sp"
         android:layout_marginTop="40sp"
-        android:backgroundTint="@color/gray">
-    </Button>
+        android:backgroundTint="@color/gray"
+        android:text="@string/txt_btn_c"></Button>
+
+    <Button
+        android:id="@+id/btn_convert_fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="40sp"
+        android:backgroundTint="@color/gray"
+        android:text="@string/txt_btn_f"></Button>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_marginTop="40sp"
@@ -33,4 +43,5 @@
         android:id="@+id/lbl_converted_value"
         android:textColor="@color/orange"
         ></TextView>
+
 </LinearLayout>

@@ -10,11 +10,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.edu.ifsp.dmos5.model.CelsiusStrategy;
+import br.edu.ifsp.dmos5.model.FahrenheitStrategy;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView lbl_converted_value;
     private Button btn_convert_celsius;
+    private Button btn_convert_fahrenheit;
     private EditText txt_input;
 
     @Override
@@ -23,7 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         lbl_converted_value = findViewById(R.id.lbl_converted_value);
         btn_convert_celsius = findViewById(R.id.btn_convert_celsius);
+        btn_convert_fahrenheit = findViewById(R.id.btn_convert_fahrenheit);
         btn_convert_celsius.setOnClickListener(this);
+        btn_convert_fahrenheit.setOnClickListener(this);
         txt_input = findViewById(R.id.txt_input);
     }
 
@@ -32,7 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         try {
             if(view == btn_convert_celsius  ){
                 CelsiusStrategy celsius = CelsiusStrategy.getInstance();
-                lbl_converted_value.setText(String.format("%.1f °C",celsius.getConversion(Double.parseDouble(String.valueOf(txt_input.getText())))));
+                lbl_converted_value.setText(String.format("%.2f °C",celsius.getConversion(Double.parseDouble(String.valueOf(txt_input.getText())))));
+            }
+
+            if (view == btn_convert_fahrenheit){
+                FahrenheitStrategy fahrenheit = FahrenheitStrategy.getInstance();
+                lbl_converted_value.setText(String.format("%.2f °F",fahrenheit.getConversion(Double.parseDouble(String.valueOf(txt_input.getText())))));
             }
         }catch (RuntimeException ex){
             Toast.makeText(this, "Erro inesperado ao realizar a conversão", Toast.LENGTH_SHORT).show();
