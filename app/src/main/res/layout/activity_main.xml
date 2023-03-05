@@ -33,6 +33,14 @@
         android:layout_marginTop="40sp"
         android:backgroundTint="@color/gray"
         android:text="@string/txt_btn_f"></Button>
+   <Button
+        android:id="@+id/btn_convert_kelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80sp"
+        android:layout_marginTop="40sp"
+        android:backgroundTint="@color/gray"
+        android:text="@string/txt_btn_k"></Button>
 
     <TextView
         android:layout_width="match_parent"

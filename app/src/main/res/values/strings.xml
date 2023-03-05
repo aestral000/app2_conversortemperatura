@@ -5,5 +5,6 @@
     <string name="txt_hint_g">Temperatura</string>
     <string name="txt_btn_f">Fahrenheit</string>
     <string name="txt_btn_c">Celsius</string>
+    <string name="txt_btn_k">Kelvin</string>
 
 </resources>
