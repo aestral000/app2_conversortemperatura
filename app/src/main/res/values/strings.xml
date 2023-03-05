@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ConversorTemperatura</string>
+    <string name="txt_hint_f">Temperatura em Fahrenheit</string>
+    <string name="txt_hint_c">Temperatura em Celsius</string>
+    <string name="txt_btn_f">Converter para Fahrenheit</string>
+    <string name="txt_btn_c">Converter para Celsius</string>
+
+</resources>
